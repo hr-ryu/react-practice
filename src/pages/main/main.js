@@ -76,7 +76,9 @@ export const Main = () => {
   return (
     <>
       <Container>
-        <div onClick={apirequest}>api button</div>
+        {/* <div onClick={apirequest}>api button</div> */}
+
+        <Link to="/menu"> Go To Menu </Link>
 
         <img src={pokemonImg} alt="" />
 
