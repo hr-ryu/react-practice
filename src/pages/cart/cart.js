@@ -1,21 +1,13 @@
 import React, {useState, useEffect} from "react";
 import { Container } from "./styled";
+import { Card } from "../../conponents/card/card";
 
 export const Cart = () => {
-    const [pokemonName, setPokemonName] = useState("");
-
-    useEffect(() => {
-        const pokemon = localStorage.getItem("pokemonName");
-        if(pokemon){
-            setPokemonName(pokemon);
-        } else {
-            console.log("error");
-        }
-    }, []);
+    const checkedMenu = localStorage.getItem("menuname")
 
     return (
         <Container>
-            <div>{pokemonName}</div>
+            <h3> Cart </h3>
         </Container>
      );
 };

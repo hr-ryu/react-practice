@@ -1,45 +1,36 @@
 import React, {useState, useEffect} from "react";
 import { Container } from "./styled";
+import { Card } from "../../conponents/card/card";
 
 const FoodMenu = [
     {
-      name: "love",
+      name: "Pasta",
       number: 1,
+      inCart: false,
     },
     {
-      name: "miki",
+      name: "Pizza",
       number: 2,
+      inCart: false,
     },
     {
-      name: "takasi",
+      name: "Doria",
       number: 3,
+      inCart: false,
     },
-    {
-      name: "ken",
-      number: 4,
-    },
-    {
-      name: "ai",
-      number: 5,
-    },
-  ];
+];
 
 export const Menu = () => {
-    const [pokemonName, setPokemonName] = useState("");
-
-    useEffect(() => {
-        const pokemon = localStorage.getItem("pokemonName");
-        if(pokemon){
-            setPokemonName(pokemon);
-        } else {
-            console.log("error");
-        }
-    }, []);
-
-    return (
-        <Container>
-            <div>{pokemonName}</div>
-
-        </Container>
-     );
+  return(
+    <Container>
+      <h3> Menu </h3>
+      
+      {FoodMenu.map((element, index) => {
+      // const temp = element.name;
+      return <Card
+      key={index}
+      name={element.name} />;
+      })}
+    </Container>
+  );
 };

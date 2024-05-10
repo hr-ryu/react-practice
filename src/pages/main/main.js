@@ -80,12 +80,12 @@ export const Main = () => {
 
         <Link to="/menu"> Go To Menu </Link>
 
-        <img src={pokemonImg} alt="" />
+        {/* <img src={pokemonImg} alt="" />
 
         {exampleStudent.map((e, i) => {
             const temp = e.name + "love";
             return <Card key={i} props={temp} />;
-        })}
+        })} */}
 
       </Container>
       
