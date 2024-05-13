@@ -20,16 +20,22 @@ const FoodMenu = [
     },
 ];
 
+const setInCart = (id) =>{
+  FoodMenu[id-1].inCart = true;
+}
+
 export const Menu = () => {
+
   return(
     <Container>
-      <h3> Menu </h3>
       
+      <h1> Menu </h1>
+    
       {FoodMenu.map((element, index) => {
-      // const temp = element.name;
-      return <Card
-      key={index}
-      name={element.name} />;
+          return <Card
+          key={index}
+          name={element.name}
+          number={element.number}/>;
       })}
     </Container>
   );
