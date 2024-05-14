@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <Container>
+      {/* ページに飛ぶためのリンク */}
       <span> <Link to= "/main">Main</Link> </span>
       <span> <Link to= "/menu">Menu</Link> </span>
-      <span> <Link to= "/cart">Cart</Link> </span>
+      {/* <span> <Link to= "/cart">Cart</Link> </span> */}
     </Container>
   );
 };

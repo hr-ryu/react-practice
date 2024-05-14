@@ -17,13 +17,15 @@ import { Header } from './conponents/header/header';
 
 function App() {
   return (
+    // ルーティング
     <Router>
       <Header />
       <Routes>
+        {/* パスを指定してそのページに飛ぶ */}
         <Route exect path="/" element={<Navigate to="/main" />} />
         <Route exect path="/main" element={<Main />} />
         <Route exect path="/menu" element={<Menu />} />
-        <Route exect path="/cart" element={<Cart />} />
+        {/* <Route exect path="/cart" element={<Cart />} /> */}
         {/* <Route exect path="/sign-in" element={<Sign />} /> */}
         
       </Routes>

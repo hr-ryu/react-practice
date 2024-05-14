@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import { Container } from "./styled";
-import { Card } from "../../conponents/card/card";
+import { Container, StyledTitle, StyledMenu } from "./styled";
+import { Card  } from "../../conponents/card/card";
 
 const FoodMenu = [
     {
@@ -18,25 +18,40 @@ const FoodMenu = [
       number: 3,
       inCart: false,
     },
+    {
+      name: "OrangeJuice",
+      number: 4,
+      inCart: false,
+    },
+    {
+      name: "ChocolateCake",
+      number: 5,
+      inCart: false,
+    },
+    {
+      name: "IceCream",
+      number: 6,
+      inCart: false,
+    },
 ];
-
-const setInCart = (id) =>{
-  FoodMenu[id-1].inCart = true;
-}
 
 export const Menu = () => {
 
   return(
     <Container>
       
-      <h1> Menu </h1>
-    
-      {FoodMenu.map((element, index) => {
-          return <Card
-          key={index}
-          name={element.name}
-          number={element.number}/>;
-      })}
+      <StyledTitle>
+        <h1> Menu </h1>
+      </StyledTitle>
+      <StyledMenu>
+        {FoodMenu.map((element, index) => {
+          // Cardコンポーネントにpropsを渡す
+            return <Card
+            key={index}
+            name={element.name}
+            number={element.number}/>;
+        })}
+      </StyledMenu>
     </Container>
   );
 };

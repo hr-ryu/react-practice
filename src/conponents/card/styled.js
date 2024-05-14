@@ -1,27 +1,36 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    padding: 0px, 0px;
+    //display: flex;  
+    //border: solid 1px black;
+    //width: 250px;
+    margin: auto;
+    // padding: 5px;
     
+`;
 
+export const MenuCard = styled.div`
+    //display: inline-block;  
+    border: solid 2px black;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    
 `;
 
 export const NameBox = styled.div`
-    
-    border: solid 3px red;
+   
+    border: solid 3px yellow;
     background: orange;
-    width: 100px;
+    width: 80%;
     height: 50px;
     margin: auto;
-
 `;
 
-export const CheckBox = styled.div`
+export const ButtonBox = styled.div`
     
-    // border: solid 3px red;
-    // background: orange;
-    // width: 100px;
-    height: 50px;
+    //border: solid 1px blue;
+    width: 80%;
+    height: 40px;
     margin: auto;
-
 `;
